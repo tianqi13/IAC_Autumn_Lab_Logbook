@@ -172,7 +172,7 @@ We see that turning the rotary button and increasing the value of vbdValue() cau
 
 The further we increase the value of incr, it seems like the frequency of the sine wave formed. However, it does not make sense as we are still taking values from the same cos wave. This means that these waves we see are aliased. 
 
-If the sampling frequency when incr = 1: $f_{samp} = \frac{256}{T}$, now we are taking less samples as we skip over some values of cos (e.g.): $f_{samp} = \frac{50}{T}$. This means that $f_{samp}$ may not satisfy the Nyquist Sampling Criteria, which states that $f_{samp} < 2f_{signal}$.
+If the sampling frequency when incr = 1: $f_{samp} = \frac{256}{T}$, now we are taking less samples as we skip over some values of cos (e.g.): $f_{samp} = \frac{50}{T}$. This means that $f_{samp}$ may not satisfy the Nyquist Sampling Criteria, which states that $f_{samp} > 2f_{signal}$.
 
 ---
 ## Task 2 - Sine and Cosine Dual Wave Generation
