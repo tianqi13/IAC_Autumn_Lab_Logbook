@@ -170,7 +170,7 @@ We see that turning the rotary button and increasing the value of vbdValue() cau
 
 <p align="center"> <img src="images/Task1_3.jpg" /> </p>
 
-The further we increase the value of incr, the greater the frequency of the sine wave formed. However, these waves we see are aliased. 
+The further we increase the value of incr, it seems like the frequency of the sine wave formed. However, it does not make sense as we are still taking values from the same cos wave. This means that these waves we see are aliased. 
 
 If the sampling frequency when incr = 1: $f_{samp} = \frac{256}{T}$, now we are taking less samples as we skip over some values of cos (e.g.): $f_{samp} = \frac{50}{T}$. This means that $f_{samp}$ may not satisfy the Nyquist Sampling Criteria, which states that $f_{samp} < 2f_{signal}$.
 
@@ -481,5 +481,5 @@ Testing of the module showed that it was working:
 * See that the mic_signal goes back to an incomprehensible wave
 * Whereas the delayed signal still shows a sine wave for a few cycles. 
 <p align="center"> <img src="images/Task3_5.jpg" /> </p>
-*Until finally they both stop showing the sine wave
+* Until finally they both stop showing the sine wave
 <p align="center"> <img src="images/Task3_6.jpg" /> </p>
