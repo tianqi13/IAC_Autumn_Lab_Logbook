@@ -172,6 +172,18 @@ Then, create a file vbuddy.cfg which contains the terminal response.
 
 **Step 2**
 
+The testbench was given for this step. A new function I learnt was how to display hex values on the TFT screen. It is as followed:
+```C++
+       ++++ Send count value to Vbuddy
+        vbdHex(4, (int(top->count) >> 12) & 0xF);
+        vbdHex(3, (int(top->count) >> 8) & 0xF);
+        vbdHex(2, (int(top->count) >> 4) & 0xF);
+        vbdHex(1, int(top->count) &0xF);
+        ---- end of Vbuddy output section
+```
+Taking the first line for example, 4 means to display it on the 4th hex display from the right, and ">> 12" means to right shift the value by 12 bits such that the 4 MSB can be anded with 0xF, displaying the value of the 4 MSB. 
+
+
 Recompiling the testbench, we see that the screen displays the count value and counts up from 0000.
 
 <p align="center"> <img src="images/countdisplay.jpg" /> </p>
@@ -213,7 +225,7 @@ always_ff @ (posedge clk)
     else count <= count + {WIDTH-1{1'b1}};
  ```
  
- <p align="center"> <img src="images/challenge3.PNG" /> </p>
+ <p align="center"> <img src="images/challenge3.png" /> </p>
 
  We see the TFT screen showing the plot of COUNT, and when the rotary button is pressed en is high, allowing count to start counting up. 
 
