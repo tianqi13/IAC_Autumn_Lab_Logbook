@@ -225,7 +225,7 @@ always_ff @ (posedge clk)
     else count <= count + {WIDTH-1{1'b1}};
  ```
  
- <p align="center"> <img src="images/challenge3.png" /> </p>
+ <p align="center"> <img src="images/challenge3.PNG" /> </p>
 
  We see the TFT screen showing the plot of COUNT, and when the rotary button is pressed en is high, allowing count to start counting up. 
 
